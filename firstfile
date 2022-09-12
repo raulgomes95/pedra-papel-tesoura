@@ -1,0 +1,18 @@
+print("[ 1 ] - PEDRA \n[ 2 ] - PAPEL \n[ 3 ] - TESOURA")
+jogador = str(input("ESCOLHA UMA OPÇÃO: "))
+computador = str(random.randint(1,3))
+resultado = str(jogador + computador)
+if resultado == '12':
+    print("Você perdeu! Você escolheu {} e o computador escolheu {}".format('PEDRA','PAPEL.'))
+elif resultado == '13':
+    print("Você venceu! Você escolheu {} e o computador escolheu {}".format('PEDRA','TESOURA.'))
+elif resultado == '21':
+    print("Você venceu! Você escolheu {} e o computador escolheu {}".format('PAPEL','PEDRA.'))
+elif resultado == '23':
+    print("Você perdeu! Você escolheu {} e o computador escolheu {}".format('PAPEL','TESOURA.'))
+elif resultado == '31':
+    print("Você perdeu! Você escolheu {} e o computador escolheu {}".format('TESOURA','PEDRA.'))
+elif resultado == '32':
+    print("Você venceu! Você escolheu {} e o cumputador escolheu {}".format('TESOURA','PAPEL.'))
+elif resultado == '11' or '22' or '33':
+    print("OH! Tivemos um empate. Vamos para mais uma rodada.")
